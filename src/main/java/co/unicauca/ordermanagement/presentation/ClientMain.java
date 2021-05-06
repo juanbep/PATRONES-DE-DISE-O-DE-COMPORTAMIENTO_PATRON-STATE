@@ -32,11 +32,11 @@ public class ClientMain {
         System.out.println("Estado: " + order.whatIsTheState());
         order.confirmOrder();
         System.out.println("Estado: " + order.whatIsTheState());
+        order.orderPayed();
+        System.out.println("Estado: " + order.whatIsTheState());
         order.orderSendOut("555555X");
         System.out.println("Estado: " + order.whatIsTheState());
         order.orderDelivered();
-        System.out.println("Estado: " + order.whatIsTheState());
-        order.orderPayed();
         System.out.println("Estado: " + order.whatIsTheState());
 
         //Flujo alternativo
@@ -58,6 +58,8 @@ public class ClientMain {
         order.addItem(pasta, 1);
         order.confirmOrder();
         System.out.println("\nEstado: " + order.whatIsTheState());
+        order.orderPayed();
+        System.out.println("Estado: " + order.whatIsTheState());
         order.orderSendOut(address);
         System.out.println("Estado: " + order.whatIsTheState());
         try {

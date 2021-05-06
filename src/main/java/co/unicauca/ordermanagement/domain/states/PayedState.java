@@ -29,11 +29,11 @@ public class PayedState extends OrderState {
     }
 
     @Override
-    public OrderState orderPayed() {
-        if (getOrder().isPaymentReceived() == false) {
-            throw new IllegalStateException("payment has not been received.");
+    public OrderState orderSendOut(String parcelNumber) {
+        if (!getOrder().isPaymentReceived()) {
+            throw new IllegalStateException("An order should not be send out when payment is not received.");
         }
-        return new PayedState(getOrder());
+        return new SendState(getOrder());
     }
 
     /**
