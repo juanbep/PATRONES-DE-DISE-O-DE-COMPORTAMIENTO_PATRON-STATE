@@ -36,6 +36,8 @@ public class ClientMain {
         System.out.println("Estado: " + order.whatIsTheState());
         order.orderDelivered();
         System.out.println("Estado: " + order.whatIsTheState());
+        order.orderPayed();
+        System.out.println("Estado: " + order.whatIsTheState());
 
         //Flujo alternativo
         order = new Order();

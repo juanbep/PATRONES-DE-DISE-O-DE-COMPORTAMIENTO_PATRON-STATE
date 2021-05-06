@@ -54,7 +54,7 @@ public class Order {
         return paymentReceived;
     }
 
-    public void setPaymentReceived(boolean paymentReceived) {        
+    public void setPaymentReceived(boolean paymentReceived) {
         this.paymentReceived = paymentReceived;
     }
 
@@ -80,6 +80,10 @@ public class Order {
 
     public void orderSendOut(String parcelNumber) {
         orderState = orderState.orderSendOut(parcelNumber);
+    }
+
+    public void orderPayed() {
+        orderState = orderState.orderPayed();
     }
 
     public boolean isFinished() {
